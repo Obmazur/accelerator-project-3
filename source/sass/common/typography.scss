@@ -1,0 +1,183 @@
+// headings
+
+@mixin title-h1 {
+  font-size: 22px;
+  line-height: 118%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 122%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 115%;
+  }
+}
+
+@mixin title-h2 {
+  font-size: 20px;
+  line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 34px;
+    line-height: 147%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 100%;
+  }
+}
+
+@mixin title-h3 {
+  font-size: 18px;
+  line-height: 122%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 112%;
+  }
+}
+
+@mixin title-h4 {
+  font-size: 16px;
+  line-height: 112%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 118%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 28px;
+    line-height: 121%;
+  }
+}
+
+@mixin title-h5 {
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 110%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 115%;
+  }
+}
+
+@mixin title-h6 {
+  font-size: 16px;
+  line-height: 112%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 108%;
+  }
+}
+
+// text
+@mixin text-big {
+  font-size: 16px;
+  line-height: 137%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 145%;
+  }
+}
+
+@mixin text-regular {
+  font-size: 14px;
+  line-height: 143%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 162%;
+  }
+}
+
+@mixin text-small {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 143%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 125%;
+  }
+}
+
+@mixin text-xsmall {
+  font-size: 12px;
+  line-height: 117%;
+  opacity: 0.9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 143%;
+    opacity: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 129%;
+  }
+}
+
+@mixin text-xxsmall {
+  font-size: 12px;
+  line-height: 117%;
+  opacity: 0.9;
+
+  @media (min-width: $tablet-width) {
+    line-height: 100%;
+  }
+}
+
+// captions
+
+@mixin caption {
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+// buttons
+
+@mixin button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
