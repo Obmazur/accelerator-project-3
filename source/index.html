@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
   <head>
     <meta charset="UTF-8">
@@ -15,8 +15,72 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon.png">
 </head>
 
-  <body class="page-body">
-
+  <body class="page__body">
+    <main class="page__main">
+      <div data-test="hero">
+        <header class="header">
+          <div class="header__container">
+            <nav class="header__nav header__nav--is-closed" aria-label="Навигация по сайту.">
+              <button class="header__button button button--menu js-toggle-button" type="button">Меню</button>
+              <img class="header__logo" src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип проекта «Стажировка».">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link" href="#about">О проекте</a>
+                </li>
+                <li class="header__item header__item--js">
+                  <button class="header__link header__link--button button" type="button">Программы</button>
+                  <ul class="header__sub-list">
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#internship">Стажировки</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#volunteer">Волонтёрство</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#study">Учеба</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#religin">Религия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#grant">Как поехать</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#reviews">Отзывы</a>
+                </li>
+                <li class="header__item header__item--js">
+                  <button class="header__link header__link--button button" type="button">Новости</button>
+                  <ul class="header__sub-list" data-id="news">
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#news-general">Общее</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#news-volunteer">Волонтёрство</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#news-internship">Стажировки</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#news-career">Карьера</a>
+                    </li>
+                    <li class="header__item header__item--sub">
+                      <a class="header__link header__link--sub" href="#news-travel">Путешествия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
+    </main>
+    <div class="page__overlay"></div>
+    <script type="module" src="js/main.js"></script>
   </body>
 
 </html>
@@ -28,7 +92,7 @@
   <use href="/__spritemap#sprite-user"></use>
 </svg> -->
 <!-- примеры требуемых атрибутов data-test="*" -->
-<!-- <div data-test="hero">hero</div>
+<!-- <div >hero</div>
 <div data-test="about">about</div>
 <div data-test="programs">programs</div>
 <div data-test="grant">grant</div>
@@ -38,4 +102,4 @@
 <div data-test="contacts">contacts</div>
 <div data-test="form">form</div>
 <div data-test="footer">footer</div>
-<script type="module" src="js/main.js"></script> -->
+ -->

@@ -1,0 +1,39 @@
+.button {
+  @include link;
+  @include button;
+
+  display: block;
+  position: relative;
+  padding: 0;
+  border: none;
+  border: 1px solid $primary;
+  border-radius: 30px;
+  background-color: $base-white;
+  color: $primary;
+  cursor: pointer;
+}
+
+.button--menu {
+  min-width: 136px;
+  padding: 19px 56px 19px 20px;
+
+  text-align: left;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 56px 20px 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    width: 46px;
+    height: 46px;
+    background-color: $primary;
+    border-radius: 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
