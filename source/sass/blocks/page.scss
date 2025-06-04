@@ -3,10 +3,9 @@
 }
 
 .page__body {
-  position: relative;
-
   @include text-regular;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 320px;
@@ -16,13 +15,30 @@
   font-weight: 400;
   font-size: 14px;
   color: $base-dark;
-
-  background-color: $base-white;
+  background-color: $biege;
+;
 
   main {
     flex-grow: 1;
   }
 }
+
+
+  .page__hero {
+    background-color: $biege;
+    position: relative;
+    margin: 0 auto;
+    width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
 
 .page__overlay {
   display: none;
