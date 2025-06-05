@@ -55,6 +55,10 @@
   overflow: hidden;
 }
 
+.page__body--modal-is-open {
+  overflow: hidden;
+}
+
 .page__body--menu-is-open .page__overlay {
   display: block;
 }

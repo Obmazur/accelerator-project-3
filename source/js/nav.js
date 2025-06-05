@@ -4,9 +4,9 @@ const pageElement = document.querySelector('.page__body');
 const menuElement = document.querySelector('.header__list');
 const overlayElement = document.querySelector('.page__overlay');
 
-const toggleMenu = (button) => {
-  button.classList.toggle('header__nav--is-closed');
-  button.classList.toggle('header__nav--is-open');
+const toggleMenu = (header) => {
+  header.classList.toggle('header__nav--is-closed');
+  header.classList.toggle('header__nav--is-open');
   pageElement.classList.toggle('page__body--menu-is-open');
 };
 

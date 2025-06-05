@@ -1,0 +1,247 @@
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: $dark-overlay;
+}
+
+.modal--is-closed {
+  display: none;
+}
+
+.modal--is-open {
+  display: flex;
+}
+
+.modal__content {
+  z-index: 55;
+  margin: auto;
+  margin-top: 23px;
+  width: 290px;
+  padding: 20px 15px 40px;
+  border-radius: 16px;
+  background-color: $base-white;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 204px;
+    padding: 30px 30px 60px;
+    width: 510px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 90px;
+  }
+}
+
+.modal__close {
+  margin: 0 5px 4px auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 8px auto;
+  }
+}
+
+.modal__title {
+  @include title-h3;
+
+  margin: 0 20px 15px;
+  color: $primary;
+  line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px 20px;
+  }
+}
+
+.modal__text {
+  @include text-regular;
+
+  margin: 0 20px 25px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px 30px;
+  }
+}
+
+.modal__form {
+  text-align: left;
+}
+
+.modal__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+    margin: 0 50px 30px;
+  }
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__name {
+  @include text-xsmall;
+
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 12px;
+  }
+}
+
+.modal__field {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+  padding: 13px;
+  font-size: 14px;
+
+  &:hover {
+    border-color: $base-dark;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $base-dark;
+  }
+
+  &:disabled {
+    border-color: rgb(169, 175, 183, 0.5);
+    background-color: rgb(169, 175, 183, 0.3);
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+.modal__field--select {
+  appearance: none;
+
+  padding-right: 50px;
+  background: url("/__spritemap#sprite-arrow-black-view") center right 20px no-repeat;
+  background-size: 16px 16px;
+}
+
+.modal__field--invalid {
+    border-color: $error;
+    background-color: rgb(255, 94, 102, 0.2);
+}
+
+.modal__option {
+  font-size: 14px;
+}
+
+.modal__label--checkbox {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 20px;
+    justify-content: center;
+  }
+}
+
+.modal__mark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $primary;
+  border: 1px solid $primary;
+  border-radius: 2px;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+}
+
+.modal__input[type="checkbox"]:checked + .modal__mark {
+  border-color: $base-white;
+  background-color: $base-white;
+  background-image: url("/__spritemap#sprite-check-view");
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__input[type="checkbox"]:disabled + .modal__mark {
+  border-color: $base-white;
+  opacity: 0.6;
+}
+
+.modal__label--checkbox:hover .modal__mark {
+  border-color: $base-white;
+}
+
+.modal__label--checkbox:focus {
+  outline: unset;
+
+  .modal__mark {
+    border-color: $base-white;
+  }
+}
+
+.modal__mark--invalid {
+  background-color: rgb(255, 94, 102, 0.2);
+  border-color: $error;
+}
+
+.modal__label--checkbox-active:hover .modal__input[type="checkbox"]:checked + .modal__mark {
+  background-color: $primary;
+  background-image: url("/__spritemap#sprite-check-white-view");
+}
+
+.modal__label--checkbox-active:focus .modal__input[type="checkbox"]:checked + .modal__mark {
+  background-color: $primary;
+  background-image: url("/__spritemap#sprite-check-white-view");
+}
+
+.modal__input[type="checkbox"]:checked:disabled + .modal__mark {
+  background-color: $disabled;
+  background-image: url("/__spritemap#sprite-check-white-view");
+}
+
+.modal__description {
+  @include text-xxsmall;
+
+  padding-left: 30px;
+}
+
+.modal__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 194px;
+    margin: 0 auto;
+  }
+}
+
+.modal__button-text {
+  margin: 0 auto;
+}

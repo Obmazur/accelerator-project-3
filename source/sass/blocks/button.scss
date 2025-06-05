@@ -142,3 +142,31 @@
   background-color: $active;
   border-color: $active;
 }
+
+.button--modal {
+  width: 16px;
+  height: 16px;
+  background: url("/__spritemap#sprite-cross-view") center no-repeat;
+  border: none;
+  border-radius: unset;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
+}
