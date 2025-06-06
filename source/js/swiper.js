@@ -1,11 +1,12 @@
 import Swiper from 'swiper';
-import {Navigation, Pagination} from 'swiper/modules';
+import {Navigation, Pagination, Scrollbar} from 'swiper/modules';
 import 'swiper/css';
 
 const paginationElement = document.querySelector('.hero__pagination');
 let sliderBodyElement;
 
 let heroSwiper;
+let programsSwiper;
 
 const initSwipers = () => {
   heroSwiper = new Swiper('.hero__swiper', {
@@ -26,11 +27,48 @@ const initSwipers = () => {
       },
     },
   });
+
+  programsSwiper = new Swiper('.programs__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    allowTouchMove: true,
+    modules: [Navigation, Scrollbar],
+    navigation: {
+      nextEl: '.programs__nav-button--next',
+      prevEl: '.programs__nav-button--prev',
+    },
+    scrollbar: {
+      el: '.programs__scrollbar',
+      enabled: true,
+      hide: false,
+      draggable: true,
+      dragClass: 'programs__scrollbar--drag',
+      dragSize: 326,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.127,
+        spaceBetween: 30,
+        slidesOffsetAfter: 45,
+        allowTouchMove: true,
+      },
+      1440: {
+        slidesOffsetAfter: 0,
+        spaceBetween: 32,
+        slidesPerView: 3,
+        allowTouchMove: false,
+        scrollbar: {
+          dragSize: 394,
+        }
+      },
+    },
+  });
 };
 
 window.addEventListener('load', () => {
   initSwipers();
   heroSwiper.init();
+  programsSwiper.init();
 
   heroSwiper.on('slideChangeTransitionStart', () => {
     paginationElement.style.opacity = 0;
