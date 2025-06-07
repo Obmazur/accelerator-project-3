@@ -1,0 +1,178 @@
+.grant {
+  background-color: $primary;
+  color: $base-white;
+}
+
+.grant__container {
+  @include block-center;
+
+  padding: 70px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 101px 45px 99px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 138px;
+    padding: 120px 206px 120px 100px;
+  }
+}
+
+.grant__left-column {
+  margin-bottom: 30px;
+
+  p {
+    @include text-regular;
+
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    p {
+      max-width: 498px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+
+    p {
+      margin-bottom: 39px;
+    }
+  }
+}
+
+.grant__title {
+  @include title-h2;
+
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.grant__image-container {
+  width: 290px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    height: 375px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 498px;
+    height: 363px;
+  }
+}
+
+.grant__subtitle {
+  @include title-h3;
+
+  padding: 10px 10px 10px 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 400px;
+    padding-top: 11px;
+    margin-bottom: 44px;
+  }
+}
+
+.grant__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 23px;
+  }
+}
+
+.grant__item {
+  @include text-regular;
+
+  position: relative;
+  margin-left: 15px;
+  padding: 24px 25px;
+  border: 1px solid $base-white;
+  border-radius: 16px;
+
+  &::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -5px;
+    left: -15px;
+    width: 32px;
+    height: 32px;
+    background-color: $primary;
+    font-size: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 25px;
+    margin-left: 20px;
+
+    &::before {
+      width: 42px;
+      height: 42px;
+      top: -16px;
+      left: -21px;
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 31px 25px 29px;
+
+    &::before {
+      top: -15px;
+    }
+  }
+}
+
+.grant__item--first::before {
+  content: '1';
+}
+
+.grant__item--second::before {
+  content: '2';
+}
+
+.grant__item--third::before {
+  content: '3';
+}
+
+.grant__item--fourth::before {
+  content: '4';
+}
