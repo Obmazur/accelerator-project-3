@@ -296,27 +296,35 @@
   @media (min-width: $tablet-width) {
     margin: 5px 0;
   }
+}
+
+.news__pagination-wrapper {
+  position: absolute;
+  top: 0;
+  left: 69px;
+  overflow: hidden;
+  width: 152px;
+  height: 26px;
+
+  @media (min-width: $tablet-width) {
+    left: 245px;
+    width: 188px;
+    height: 32px;
+  }
 
   @media (min-width: $desktop-width) {
-
+    left: 526px;
   }
 }
 
 .news__pagination {
   position: absolute;
-  top: 0;
-  left: 69px;
   display: flex;
   gap: 16px;
-  overflow: hidden;
+  transition: left 300ms;
 
   @media (min-width: $tablet-width) {
     gap: 20px;
-    left: 245px;
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 526px;
   }
 }
 

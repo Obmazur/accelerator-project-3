@@ -2,6 +2,7 @@ import Swiper from 'swiper';
 import {Navigation, Pagination, Scrollbar, Grid} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/grid';
+import {enableBullets} from './pagination';
 
 const paginationElement = document.querySelector('.hero__pagination');
 let sliderBodyElement;
@@ -113,6 +114,7 @@ window.addEventListener('load', () => {
   heroSwiper.init();
   newsSwiper.init();
   programsSwiper.init();
+  enableBullets();
 
   heroSwiper.on('slideChangeTransitionStart', () => {
     paginationElement.style.opacity = 0;
@@ -138,3 +140,4 @@ window.addEventListener('resize', () => {
   }
   paginationElement.style.opacity = 1;
 });
+
