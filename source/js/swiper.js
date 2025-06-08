@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import {Navigation, Pagination, Scrollbar} from 'swiper/modules';
+import {Navigation, Pagination, Scrollbar, Grid} from 'swiper/modules';
 import 'swiper/css';
 
 const paginationElement = document.querySelector('.hero__pagination');
@@ -7,6 +7,8 @@ let sliderBodyElement;
 
 let heroSwiper;
 let programsSwiper;
+let newsSwiper;
+let reviewsSwiper;
 
 const initSwipers = () => {
   heroSwiper = new Swiper('.hero__swiper', {
@@ -63,11 +65,51 @@ const initSwipers = () => {
       },
     },
   });
+
+  newsSwiper = new Swiper('.news__swiper', {
+    modules: [Navigation, Pagination, Grid],
+    slidesPerView: 1,
+    grid: {
+      rows: 2,
+      fill: 'column',
+    },
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.news__nav-button--next',
+      prevEl: '.news__nav-button--prev',
+    },
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      bulletClass: 'news__bullet',
+      bulletActiveClass: 'news__bullet--active',
+      renderBullet: function (index, className) {
+        return `<span class="${className}" tabIndex=0>${index + 1}</span>`;
+      },
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 2,
+        grid: {
+          fill: 'row',
+        },
+      },
+      1440: {
+        slidesPerView: 'auto',
+        spaceBetween: 32,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+  });
 };
 
 window.addEventListener('load', () => {
   initSwipers();
   heroSwiper.init();
+  newsSwiper.init();
   programsSwiper.init();
 
   heroSwiper.on('slideChangeTransitionStart', () => {

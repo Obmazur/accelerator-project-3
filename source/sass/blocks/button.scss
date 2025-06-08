@@ -208,6 +208,7 @@
   }
 
   &:disabled {
+    pointer-events: none;
     path {
       stroke: $disabled;
     }
@@ -216,4 +217,41 @@
 
 .button--arrow-prev {
   transform: rotate(180deg);
+}
+
+.button--tab {
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-color: transparent;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $base-white;
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px 0;
+    width: 120px;
+  }
+}
+
+.button--tab-active {
+  border-color: $primary;
+  opacity: 1;
+  padding: 10px 15px 10px 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 20px;
+  }
 }
