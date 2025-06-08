@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination, Scrollbar, Grid} from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/grid';
 
 const paginationElement = document.querySelector('.hero__pagination');
 let sliderBodyElement;
@@ -92,6 +93,7 @@ const initSwipers = () => {
         spaceBetween: 30,
         slidesPerView: 2,
         grid: {
+          rows: 2,
           fill: 'row',
         },
       },
