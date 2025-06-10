@@ -1,0 +1,142 @@
+.contacts {
+  background-color: $primary;
+  color: $base-white;
+}
+
+.contacts__container {
+  @include block-center;
+
+  padding: 71px 15px 70px;
+
+  @media (min-width: $tablet-width) {
+    padding: 101px 45px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 120px 100px;
+  }
+}
+
+.contacts__header {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgb(255, 255, 255, 0.2);
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 39px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+}
+
+.contacts__title {
+  @include title-h2;
+
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 5px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+.contacts__body {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 604px;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__subtitle {
+  @include caption;
+
+  margin: 0;
+  margin-bottom: 14px;
+  font-weight: 400;
+  color: $biege;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.contacts__text {
+  @include text-regular;
+
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 4px;
+    max-width: 263px;
+  }
+}
+
+.contacts__link {
+  @include link;
+
+  display: inline-block;
+  color: $base-white;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    color: $base-dark;
+    box-shadow: 0 1px $base-dark;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $base-white;
+    box-shadow: 0 1px $base-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.contacts__image-container {
+  border-radius: 16px;
+  overflow: hidden;
+  width: 290px;
+  height: 240px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+    height: 486px;
+  }
+}
