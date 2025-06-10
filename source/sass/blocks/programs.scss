@@ -164,6 +164,7 @@
   display: none;
   height: 2px;
   background-color: rgb(49, 109, 194, 0.2);
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -178,8 +179,21 @@
 }
 
 .programs__scrollbar--drag {
-  background-color: $primary;
+  padding: 10px;
   height: 2px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  &::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    background-color: $primary;
+  }
 }
 
 .programs__navigation {

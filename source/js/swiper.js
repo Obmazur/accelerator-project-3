@@ -107,6 +107,43 @@ const initSwipers = () => {
       },
     },
   });
+
+  reviewsSwiper = new Swiper('.reviews__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    modules: [Navigation, Scrollbar],
+    navigation: {
+      nextEl: '.reviews__nav-button--next',
+      prevEl: '.reviews__nav-button--prev',
+    },
+    scrollbar: {
+      el: '.reviews__scrollbar',
+      enabled: true,
+      hide: false,
+      draggable: true,
+      dragClass: 'reviews__scrollbar--drag',
+      dragSize: 326,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1.276,
+        spaceBetween: 30,
+        slidesOffsetAfter: 45,
+        scrollbar: {
+          enabled: true,
+        }
+      },
+      1440: {
+        slidesOffsetAfter: 0,
+        spaceBetween: 32,
+        slidesPerView: 2,
+        scrollbar: {
+          dragSize: 394,
+          enabled: true,
+        }
+      },
+    },
+  });
 };
 
 window.addEventListener('load', () => {
