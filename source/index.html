@@ -838,7 +838,7 @@
         </div>
       </section>
 
-      <section class="contacts" data-test="contacts">
+      <section class="contacts" data-test="contacts" id="contacts">
         <div class="contacts__container">
           <div class="contacts__header">
             <h2 class="contacts__title">Контакты</h2>
@@ -866,6 +866,65 @@
               <source media="(min-width: 768px)" type="image/jpeg" srcset="img/content/contacts/map-tablet.jpg 1x, img/content/contacts/map-tablet@2x.jpg 2x" width="678" height="500">
               <img class="contacts__image" src="img/content/contacts/map-mobile.jpg" width="290" height="240" srcset="img/content/contacts/map-mobile@2x.png 2x" alt="Гостиницы на пляже.">
             </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="form" data-test="form">
+        <div class="form__container">
+          <div class="form__background">
+            <div class="form__wrapper">
+              <h2 class="form__title">Напишите нам</h2>
+              <p class="form__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+              <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__name">Имя</span>
+                      <input class="form__field" type="text" name="name" autocomplete="off" required>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__name">Телефон</span>
+                      <input class="form__field form__field--tel" type="tel" name="tel" pattern="^(\+7|7)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" autocomplete="off" required>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__name">Ваше сообщение</span>
+                      <textarea class="form__field form__field--message" name="message" spellcheck="true"></textarea>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label">
+                      <span class="form__name">Выберите город</span>
+                      <select class="form__field form__field--select" name="city" required>
+                        <option class="form__option" value=""></option>
+                        <option class="form__option" value="moscow">Москва</option>
+                        <option class="form__option" value="saints-petersburg">Санкт-Петербург</option>
+                        <option class="form__option" value="novosibirsk">Новосибирск</option>
+                      </select>
+                    </label>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label form__label--checkbox" tabindex="0">
+                      <input class="visually-hidden form__input" type="checkbox" name="accept" required>
+                      <span class="form__mark"></span>
+                      <span class="form__description">Я согласен на обработку моих персональных <br>данных</span>
+                    </label>
+                  </li>
+                </ul>
+                <button class="form__button button button--dark js--form-submit" type="submit">
+                  <div class="form__button-text">Отправить</div>
+                  <span>
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.799805 7.20005L7.1998 0.800049M7.1998 0.800049H0.842189M7.1998 0.800049V7.15766" stroke="#316DC2" stroke-width="1.6" />
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -941,7 +1000,4 @@
 <svg>
   <use href="/__spritemap#sprite-user"></use>
 </svg> -->
-<!-- примеры требуемых атрибутов data-test="*" -->
-<!-- <div data-test="form">form</div>
-<div data-test="footer">footer</div>
- -->
+<!-- <div data-test="footer">footer</div> -->

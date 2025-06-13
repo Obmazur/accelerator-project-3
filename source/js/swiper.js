@@ -146,35 +146,28 @@ const initSwipers = () => {
   });
 };
 
+const alignPagination = () => {
+  sliderBodyElement = document.querySelector('.swiper-slide-active .hero__title');
+  paginationElement.style.top = `${sliderBodyElement.offsetTop - 28}px`;
+  if (window.innerWidth >= 768) {
+    paginationElement.style.top = `${sliderBodyElement.offsetTop - 40}px`;
+  }
+  paginationElement.style.opacity = 1;
+};
+
 window.addEventListener('load', () => {
   initSwipers();
   heroSwiper.init();
   newsSwiper.init();
   programsSwiper.init();
+  reviewsSwiper.init();
   enableBullets();
 
   heroSwiper.on('slideChangeTransitionStart', () => {
     paginationElement.style.opacity = 0;
   });
 
-  heroSwiper.on('slideChangeTransitionEnd', () => {
-    sliderBodyElement = document.querySelector('.swiper-slide-active .hero__title');
-    if (window.innerWidth >= 768) {
-      paginationElement.style.top = `${sliderBodyElement.offsetTop - 40}px`;
-    } else {
-      paginationElement.style.top = `${sliderBodyElement.offsetTop - 28}px`;
-    }
-    paginationElement.style.opacity = 1;
-  });
+  heroSwiper.on('slideChangeTransitionEnd', alignPagination);
 });
 
-window.addEventListener('resize', () => {
-  sliderBodyElement = document.querySelector('.swiper-slide-active .hero__title');
-  if (window.innerWidth >= 768) {
-    paginationElement.style.top = `${sliderBodyElement.offsetTop - 40}px`;
-  } else {
-    paginationElement.style.top = `${sliderBodyElement.offsetTop - 28}px`;
-  }
-  paginationElement.style.opacity = 1;
-});
-
+window.addEventListener('resize', alignPagination);
