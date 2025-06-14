@@ -38,18 +38,18 @@
 }
 
 .faq__item {
-  padding: 21px 15px 18px;
+  padding: 21px 15px 19px;
   border: 2px solid $primary;
   border-radius: 14px;
   color: $primary;
 
   @media (min-width: $tablet-width) {
-    padding: 31px 30px 28px;
+    padding: 31px 30px 29px;
     border-radius: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 40px 38px;
+    padding: 41px 40px 39px;
   }
 }
 
@@ -160,10 +160,8 @@
 }
 
 .faq__answer {
-  max-height: 0;
-  opacity: 0;
+  display: none;
   margin-bottom: 1px;
-  transition: opacity 300ms, max-height 300ms;
 
   p {
     @include text-regular;
@@ -189,10 +187,9 @@
   }
 
   .faq__answer {
-    max-height: 1000px;
-    opacity: 1;
+    display: block;
     margin-top: 19px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
 
   @media (min-width: $desktop-width) {

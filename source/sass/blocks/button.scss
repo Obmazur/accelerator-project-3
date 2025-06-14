@@ -334,3 +334,63 @@
     }
   }
 }
+
+.button--social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  background-color: $primary;
+  border: none;
+
+  &:hover {
+    path {
+      opacity: 0.7;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $base-white;
+
+    path {
+      fill: $primary;
+    }
+  }
+
+  &:active {
+    background-color: $active;
+
+    path {
+      opacity: 1;
+      fill: $base-white;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.button__vk {
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 9px;
+  }
+}
+
+.button__ok {
+  @media (min-width: $tablet-width) {
+    width: 10px;
+    height: 17px;
+  }
+}
+
+.button__reddit {
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 17px;
+  }
+}
