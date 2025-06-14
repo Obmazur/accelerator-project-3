@@ -184,8 +184,8 @@
   border-radius: 0 12px 0 0;
   padding: 13px 12px 5px 0;
 
-&::before {
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     top: -16px;
     left: 0;
@@ -196,7 +196,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: -16px;
@@ -223,7 +223,7 @@
   width: 200px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: -16px;
@@ -256,7 +256,7 @@
   opacity: 1;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: -16px;
@@ -277,10 +277,6 @@
     p {
       margin-right: 16px;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -359,10 +355,6 @@
   @media (min-width: $tablet-width) {
     width: 32px;
     height: 32px;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 

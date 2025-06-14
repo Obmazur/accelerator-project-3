@@ -4,6 +4,7 @@
 
 .header__container {
   @include block-center;
+
   padding: 20px 15px;
 
   @media (min-width: $tablet-width) {
@@ -175,7 +176,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     right: 0;
     width: 12px;

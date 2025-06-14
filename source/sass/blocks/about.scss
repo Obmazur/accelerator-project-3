@@ -88,7 +88,6 @@
   @media (min-width: $tablet-width) {
     min-width: 279px;
   }
-
 }
 
 .about__list {
@@ -102,7 +101,7 @@
   background-color: $primary;
   color: $base-white;
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 54px 52px;
@@ -136,7 +135,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -21px;
     left: -21px;

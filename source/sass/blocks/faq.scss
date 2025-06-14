@@ -56,47 +56,50 @@
 .faq__question-wrapper {
   display: flex;
   align-items: center;
+}
 
-  &:hover,
-  &:focus {
-    outline: none;
+.faq__question-wrapper:hover,
+.faq__question-wrapper:focus {
+  outline: none;
 
-    .faq__button {
-      border: 1px solid $primary;
-      background-color: transparent;
-
-      &::before,
-      &::after {
-        background-color: $primary;
-      }
-    }
+  .faq__button {
+    border: 1px solid $primary;
+    background-color: transparent;
   }
 
-  &:active {
-    .faq__button {
-      border: none;
-      background-color: $active;
-
-      &::before,
-      &::after {
-        background-color: $base-white;
-      }
-    }
-  }
-
-  &[aria-disabled="true"] {
-      pointer-events: none;
-
-      .faq__button {
-      background-color: $disabled;
-
-      &::before,
-      &::after {
-        opacity: 0.6;
-      }
-    }
+  .faq__button::before,
+  .faq__button::after {
+    background-color: $primary;
   }
 }
+
+
+.faq__question-wrapper:active {
+  .faq__button {
+    border: none;
+    background-color: $active;
+  }
+
+  .faq__button::before,
+  .faq__button::after {
+    background-color: $base-white;
+  }
+}
+
+
+.faq__question-wrapper[aria-disabled="true"] {
+  pointer-events: none;
+
+  .faq__button {
+    background-color: $disabled;
+  }
+
+  .faq__button::before,
+  .faq__button::after {
+    opacity: 0.6;
+  }
+}
+
 
 .faq__question {
   @include title-h4;
@@ -132,7 +135,7 @@
   &::after {
     @include center;
 
-    content: '';
+    content: "";
     width: 18px;
     height: 1px;
     background-color: $base-white;
@@ -140,18 +143,6 @@
 
   &::after {
     transform: translateX(-50%) translateY(-50%) rotate(90deg);
-  }
-
-  &[aria-disabled="true"] {
-      .faq__button {
-      background-color: $disabled;
-      pointer-events: none;
-
-      &::before,
-      &::after {
-        opacity: 0.6;
-      }
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -193,7 +184,7 @@
   }
 
   @media (min-width: $desktop-width) {
-      .faq__answer {
+    .faq__answer {
       margin-top: 20px;
     }
   }
@@ -205,11 +196,11 @@
     .faq__button {
       border: 1px solid $base-white;
       background-color: transparent;
+    }
 
-      &::before,
-      &::after {
-        background-color: $base-white;
-      }
+    .faq__button::before,
+    .faq__button::after {
+      background-color: $base-white;
     }
   }
 
@@ -217,11 +208,11 @@
     .faq__button {
       border: none;
       background-color: $base-white;
+    }
 
-      &::before,
-      &::after {
-        background-color: $active;
-      }
+    .faq__button::before,
+    .faq__button::after {
+      background-color: $active;
     }
   }
 }

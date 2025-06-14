@@ -149,8 +149,8 @@
 }
 
 .modal__field--invalid {
-    border-color: $error;
-    background-color: rgb(255, 94, 102, 0.2);
+  border-color: $error;
+  background-color: rgb(255, 94, 102, 0.2);
 }
 
 .modal__option {
@@ -244,4 +244,5 @@
 
 .modal__button-text {
   margin: 0 auto;
+  font-weight: 500;
 }

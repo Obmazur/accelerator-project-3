@@ -1,11 +1,11 @@
 const modal = document.querySelector('.modal');
-const modalToggle = document.querySelectorAll('.js--modal-toggle');
+const modalToggle = document.querySelectorAll('.js-modal-toggle');
 const modalOverlay = modal.querySelector('.modal__overlay');
 const pageElement = document.querySelector('.page__body');
 const formElement = document.querySelector('.modal__form');
 const formFieldElements = formElement.querySelectorAll('.modal__field');
 const checkboxElement = formElement.querySelector('.modal__input');
-const submitButtonElement = formElement.querySelector('.js--modal-submit');
+const submitButtonElement = formElement.querySelector('.js-modal-submit');
 let invalidFields;
 
 const toggleModal = () => {

@@ -1,11 +1,11 @@
 const pageElement = document.querySelector('.page__body');
 const messageElement = pageElement.querySelector('.message');
-const messageToggle = document.querySelector('.js--message-toggle');
+const messageToggle = document.querySelector('.js-message-toggle');
 const messageOverlay = messageElement.querySelector('.message__overlay');
 const formElement = pageElement.querySelector('.form__form');
 const formFieldElements = formElement.querySelectorAll('.form__field');
 const checkboxElement = formElement.querySelector('.form__input');
-const submitButtonElement = formElement.querySelector('.js--form-submit');
+const submitButtonElement = formElement.querySelector('.js-form-submit');
 let invalidFields;
 
 const toggleMessage = () => {

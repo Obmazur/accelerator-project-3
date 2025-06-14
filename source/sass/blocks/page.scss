@@ -16,7 +16,7 @@
   font-size: 14px;
   color: $base-dark;
   background-color: $biege;
-;
+
 
   main {
     flex-grow: 1;
@@ -24,11 +24,11 @@
 }
 
 
-  .page__hero {
-    background-color: $biege;
-    position: relative;
-    margin: 0 auto;
-    width: 320px;
+.page__hero {
+  background-color: $biege;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;

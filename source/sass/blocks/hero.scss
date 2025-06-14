@@ -160,20 +160,21 @@
     position: relative;
     width: 267px;
     margin: 0;
-    padding: 0 14px 15px 14px;
+    padding: 0 14px 15px;
     background-color: $base-white;
-    border-radius: 0 0 14px 0;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -8px;
-      width: 8px;
-      height: 10px;
-      background: (url("/__spritemap#sprite-corner-view") no-repeat);
-    }
+    border-radius: 0 0 14px;
   }
+
+  p::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 8px;
+    height: 10px;
+    background: (url("/__spritemap#sprite-corner-view") no-repeat);
+  }
+
 
   @media (min-width: $tablet-width) {
     width: 591px;
@@ -185,7 +186,7 @@
       width: 355px;
 
       &::after {
-      display: none;
+        display: none;
       }
     }
   }
@@ -208,7 +209,7 @@
   border-radius: 0 0 14px 14px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: -10px;
@@ -219,7 +220,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 40px 0 0;
-    border-radius: 0 0 30px 0;
+    border-radius: 0 0 30px;
 
     &::after {
       width: 26px;
@@ -256,7 +257,7 @@
   transition: opacity 200ms linear;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: -10px;
